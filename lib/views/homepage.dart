@@ -31,19 +31,25 @@ class _HomePageState extends State<HomePage> {
             ])),
         child: Stack(
           children: [
-            Positioned(child: Image.asset('assets/images/background.png')),
+            Positioned(
+                child: Row(
+              children: [
+                SizedBox(
+                  width: 130,
+                ),
+                Image.asset('assets/images/background.png'),
+              ],
+            )),
             Positioned(
               top: 30,
               left: 40,
-              child: Container(
-                  height: 20,
-                  width: 30,
-                  child: Image.asset(
-                    'assets/images/playstation.png',
-                  )),
+              child: Image.asset(
+                'assets/images/playstation.png',
+              ),
             ),
             Positioned(
-                right: 900,
+                right: 410,
+                top: 40,
                 child: Row(
                   children: [
                     Text(
@@ -52,30 +58,66 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.white, fontWeight: FontWeight.w100),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 30,
                     ),
                     Text(
-                      'Consoles',
+                      'Shop',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.w100),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 30,
                     ),
                     Text(
-                      'Consoles',
+                      'Controllers',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.w100),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 30,
                     ),
                     Text(
-                      'Consoles',
+                      'Prices',
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.normal),
+                    ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Text(
+                      'Contacts',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.w100),
-                    )
+                    ),
                   ],
+                )),
+            Positioned(
+                right: 120,
+                bottom: 150,
+                child: Image.asset(
+                  'assets/images/console.png',
+                  width: 500,
+                )),
+            Positioned(
+                top: 260,
+                left: 180,
+                child: Image.asset(
+                  'assets/images/Dualshock.png',
+                  width: 480,
+                )),
+            Positioned(
+                left: 260,
+                top: 260,
+                child: Text(
+                  'Sony',
+                  style: TextStyle(color: Colors.white),
+                )),
+            Positioned(
+                left: 190,
+                top: 360,
+                child: Text(
+                  'welcome to the world\'s best platform to get your special and best consoles \n ever made by man, improve your gaming experience and feel \n in the moment, also dont forget to enjoy the ride.',
+                  style: TextStyle(color: Colors.white),
                 ))
           ],
         ),
